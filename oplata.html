@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styOpl.css">
+    <title>oplata</title>
+</head>
+
+<hgroup class="heading">
+    <h1 class="major">Форма оформления заказа</h1>
+</hgroup>
+
+<form class="checkout" id="checkoutForm">
+    <div class="checkout-header">
+        <h1 class="checkout-title">Оформление заказа</h1>
+    </div>
+    <p>
+        <input type="text" class="checkout-input checkout-name" placeholder="Ваше Имя" autofocus required>
+        <input type="text" class="checkout-input checkout-exp" placeholder="MM" required>
+        <input type="text" class="checkout-input checkout-exp" placeholder="YY" required>
+    </p>
+    <p>
+        <input type="text" class="checkout-input checkout-card" placeholder="4111 1111 1111 1111" required>
+        <input type="text" class="checkout-input checkout-cvc" placeholder="CVC" required>
+    </p>
+    <p>
+        <input type="submit" value="Оплата" class="checkout-btn">
+    </p>
+</form>
+
+<script>
+    document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Предотвращаем отправку формы
+
+        // Здесь можно добавить дополнительную валидацию, если необходимо
+
+        alert('Оплата успешно совершена!'); // Показываем сообщение
+        window.location.href = 'index.html'; // Перенаправляем на главную страницу
+    });
+</script>
